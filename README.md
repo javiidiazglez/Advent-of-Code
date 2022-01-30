@@ -13,3 +13,5 @@ Para compilar los archivos utilizamos el
 ## Listado de repositorios:
 
 - ### [Day 01](https://github.com/alu0101128894/Advent-of-Code/tree/main/Day%2001). Sonar Sweep
+
+- ### [Day 02](https://github.com/alu0101128894/Advent-of-Code/tree/main/Day%2002). Dive!

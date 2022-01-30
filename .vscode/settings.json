@@ -28,6 +28,18 @@
     "system_error": "cpp",
     "type_traits": "cpp",
     "typeinfo": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "fstream": "cpp",
+    "chrono": "cpp",
+    "codecvt": "cpp",
+    "deque": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "functional": "cpp",
+    "iomanip": "cpp",
+    "optional": "cpp",
+    "ratio": "cpp",
+    "sstream": "cpp",
+    "tuple": "cpp"
   }
 }
