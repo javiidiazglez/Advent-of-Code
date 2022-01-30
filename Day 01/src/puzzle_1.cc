@@ -6,21 +6,34 @@ constexpr std::array<int, 2000> Input = { 188,192,196,198,199,202,208,225,231,21
 
 // 1655 ?
 void Puzzle_1::SolucionA() {
-  std::cout << ContadorMeasurements() << "\n";
-
+  std::cout << ContadorMeasurements(1) << "\n";
 }
 
-int Puzzle_1::ContadorMeasurements() {
+// 1683
+void Puzzle_1::SolucionB() {
+  std::cout << ContadorMeasurements(3) << "\n";
+}
+
+int Puzzle_1::ContadorMeasurements(std::size_t Size) {
 
   int contador = 0;
 
-  for (size_t i = 1; i < Input.size(); ++i) { // empezamos en 1,    
-    int AnteriorMeasurements = Input[i - 1];
-    int ActualMeasurements = Input[i];
+  for (std::size_t i = Size + 1; i <= Input.size(); ++i) {                   // empezamos en 1, || Size + 1 = para empezar 3 y pasar al 4    
+    int AnteriorMeasurements = AcumuladorMeasurements(i - Size - 1 , Size);  //  2000 - 1 - 1 = 1998 || 1 = size_t Size 
+    int ActualMeasurements = AcumuladorMeasurements(i - Size, Size);         // 2000 - 1 = 1999
 
     if (ActualMeasurements > AnteriorMeasurements) {
       ++contador;
     }
   }
   return contador;
+}
+
+int Puzzle_1::AcumuladorMeasurements(std::size_t Start, std::size_t Size) {
+  int Acumulador = 0;
+  for (std::size_t i = Start; i < Start + Size; ++i ) {
+    
+    Acumulador += Input[i];
+  }
+  return Acumulador;
 }
