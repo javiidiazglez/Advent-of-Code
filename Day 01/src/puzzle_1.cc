@@ -14,7 +14,7 @@ int Puzzle_1::ContadorMeasurements() {
 
   int contador = 0;
 
-  for (size_t i = 1; i < Input.size(); ++i) { // empezamos en 1,    int AnteriorMeasurements = Input[i - 1];
+  for (size_t i = 1; i < Input.size(); ++i) { // empezamos en 1,    
     int AnteriorMeasurements = Input[i - 1];
     int ActualMeasurements = Input[i];
 
